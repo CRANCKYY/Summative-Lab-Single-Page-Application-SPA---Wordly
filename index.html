@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Wordly</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head> 
+    <body>
+        <nav>
+            <h1>Wordly</h1>
+            <div>
+                <a href="#home" class="active" onclick="showView('home')">Home</a>
+                <a href="#favourites" onclick="showView('favourites')">Favourites</a>
+            </div>
+        </nav>
+        <main>
+            HOME
+            <div id="home">
+                <h2>Dictionary</h2>
+                <p>Search any word</p>
+                <form id="searchForm">
+                    <input type="text" id="wordInput" placeholder="Enter word...">
+                    <button type="submit">Search</button>
+                    <div id="loading" style="display:none">Loading...</div>
+                    <div id="error" style="display:none;color:red"></div>
+                </form>
+                <div id="results" style="display:none">
+                    <h3 id="wordTitle"></h3>
+                    <p id="phonetic"></p>
+                    <button id="audioBtn" style="display:none">Play</button>
+                    <button id="favBtn">Save</button>
+                    <div id="meanings"></div>
+                    <div id="synonyms"></div>
+                    <a id="sourceLink" href="#" target="_blank" style="display:none">Source</a>
+                </div>
+            </div>
+            FAVOURITES
+            <div id="favourites" style="display:none">
+                <h2>Favourites</h2>
+                <p id="favCount">0 saved</p>
+                <div id="favEmpty"><p>No favourites yet</p></div>
+            </div>
+        </main>
+        <script src="js/app.js"></script>
+    </body>
+</html>
